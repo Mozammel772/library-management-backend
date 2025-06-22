@@ -4,7 +4,7 @@ import config from "./config";
 
 const startServer = async () => {
   try {
-    await mongoose.connect(config.database_url);
+    await mongoose.connect(config.database_url!);
     console.log("✅ MongoDB connected successfully");
 
     app.listen(config.port, () => {
