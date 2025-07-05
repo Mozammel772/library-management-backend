@@ -48,7 +48,7 @@ const getBooks = async (req: Request, res: Response) => {
 
 const getBookById = async (req: Request, res: Response) => {
   try {
-    const book = await Book.findById(req.params.bookId);
+    const book = await Book.findById(req.params.id);
     res.json({
       success: true,
       message: "Book retrieved successfully",
@@ -61,7 +61,7 @@ const getBookById = async (req: Request, res: Response) => {
 
 const updateBook = async (req: Request, res: Response) => {
   try {
-    const book = await Book.findByIdAndUpdate(req.params.bookId, req.body, {
+    const book = await Book.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
     });

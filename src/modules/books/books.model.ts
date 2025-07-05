@@ -1,12 +1,14 @@
 import { Schema, model } from "mongoose";
 
 export enum Genre {
-  FICTION = "FICTION",
-  NON_FICTION = "NON_FICTION",
-  SCIENCE = "SCIENCE",
-  HISTORY = "HISTORY",
-  BIOGRAPHY = "BIOGRAPHY",
-  FANTASY = "FANTASY",
+  "Fiction",
+  "NonFiction",
+  "Science",
+  "History",
+  "Fantasy",
+  "Mystery",
+  "Romance",
+  "Thriller",
 }
 
 const bookSchema = new Schema(

@@ -9,10 +9,10 @@ import {
 
 const router = express.Router();
 
-router.post("/", createBook);
+router.post("/create-book", createBook);
 router.get("/", getBooks);
-router.get("/:bookId", getBookById);
-router.put("/:bookId", updateBook);
+router.get("/:id", getBookById);
+router.patch("/:id", updateBook);
 router.delete("/:bookId", deleteBook);
 
 export default router;
