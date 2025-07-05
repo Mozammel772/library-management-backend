@@ -13,12 +13,14 @@ exports.Book = exports.Genre = void 0;
 const mongoose_1 = require("mongoose");
 var Genre;
 (function (Genre) {
-    Genre["FICTION"] = "FICTION";
-    Genre["NON_FICTION"] = "NON_FICTION";
-    Genre["SCIENCE"] = "SCIENCE";
-    Genre["HISTORY"] = "HISTORY";
-    Genre["BIOGRAPHY"] = "BIOGRAPHY";
-    Genre["FANTASY"] = "FANTASY";
+    Genre[Genre["Fiction"] = 0] = "Fiction";
+    Genre[Genre["NonFiction"] = 1] = "NonFiction";
+    Genre[Genre["Science"] = 2] = "Science";
+    Genre[Genre["History"] = 3] = "History";
+    Genre[Genre["Fantasy"] = 4] = "Fantasy";
+    Genre[Genre["Mystery"] = 5] = "Mystery";
+    Genre[Genre["Romance"] = 6] = "Romance";
+    Genre[Genre["Thriller"] = 7] = "Thriller";
 })(Genre || (exports.Genre = Genre = {}));
 const bookSchema = new mongoose_1.Schema({
     title: {

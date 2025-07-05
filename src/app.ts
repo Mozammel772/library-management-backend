@@ -9,6 +9,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use(
+  cors({
+    origin: [
+      "https://minimal-library-management-system-frontend-gfm5jtp6l.vercel.app",
+    ],
+  })
+);
+
 // Routes
 app.use("/api/books", bookRoutes);
 app.use("/api/borrow", borrowRoutes);

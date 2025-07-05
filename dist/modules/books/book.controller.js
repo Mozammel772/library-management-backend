@@ -53,7 +53,7 @@ const getBooks = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 exports.getBooks = getBooks;
 const getBookById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const book = yield books_model_1.Book.findById(req.params.bookId);
+        const book = yield books_model_1.Book.findById(req.params.id);
         res.json({
             success: true,
             message: "Book retrieved successfully",
@@ -67,7 +67,7 @@ const getBookById = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 exports.getBookById = getBookById;
 const updateBook = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const book = yield books_model_1.Book.findByIdAndUpdate(req.params.bookId, req.body, {
+        const book = yield books_model_1.Book.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
             runValidators: true,
         });
